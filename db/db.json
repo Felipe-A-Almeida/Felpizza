@@ -1,0 +1,121 @@
+{
+  "ingredients": {
+    "size": [
+      {
+        "id": 1,
+        "name": "Extra large",
+        "description": "Twelve slices - 40cm" 
+      },
+      {
+        "id": 2,
+        "name": "Large",
+        "description": "Eight slices - 35cm"
+      },
+      {
+        "id": 3,
+        "name": "Normal",
+        "description": "Six slices - 30cm"
+      },
+      {
+        "id": 4,
+        "name": "Small",
+        "description": "Four slices - 25cm"
+      }
+    ],
+    "sauce": [
+      {
+        "id": 1,
+        "name": "Tomato sauce"
+      },
+      {
+        "id": 2,
+        "name": "Steak sauce"
+      },
+      {
+        "id": 3,
+        "name": "Ranch sauce"
+      },
+      {
+        "id": 4,
+        "tipo": "Veggie sauce"
+      }
+    ],
+    "cheese": [
+      {
+        "id": 1,
+        "name": "Cheese"
+      },
+      {
+        "id": 2,
+        "name": "Mozzarella cheese"
+      },
+      {
+        "id": 3,
+        "name": "Parmesan cheese"
+      },
+      {
+        "id": 4,
+        "name": "Cheddar cheese"
+      }
+    ],
+    "meat": [
+      {
+        "id": 1,
+        "name": "Ham"
+      },
+      {
+        "id": 2,
+        "name": "Bacon"
+      },
+      {
+        "id": 3,
+        "name": "Pepperonni"
+      },
+      {
+        "id": 4,
+        "name": "Chicken"
+      }
+    ],
+    "additives": [
+      {
+        "id": 1,
+        "name": "Oregano"
+      },
+      {
+        "id": 2,
+        "name": "Tomatoes"
+      },
+      {
+        "id": 3,
+        "name": "Onios"
+      },
+      {
+        "id": 4,
+        "name": "Peppers"
+      },
+      {
+        "id": 5,
+        "name": "Mushrooms"
+      },
+      {
+        "id": 6,
+        "name": "Corn"
+      }
+    ]
+  },
+  "status": [
+    {
+      "id": 1,
+      "tipo": "Ordered"
+    },
+    {
+      "id": 2,
+      "tipo": "In progress"
+    },
+    {
+      "id": 3,
+      "tipo": "Done"
+    }
+  ],
+  "orders": []
+}
