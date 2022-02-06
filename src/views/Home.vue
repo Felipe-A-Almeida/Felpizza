@@ -4,19 +4,19 @@
     <h1>
       Build your pizza
     </h1>
-    <p>
-      form
-    </p>
+    <BuildForm />
   </div>
 </template>
 
 <script>
-  import Banner from "../components/Banner.vue"
+  import Banner from "../components/Banner.vue";
+  import BuildForm from "../components/BuildForm.vue";
 
   export default {
     name: "Home",
     components: {
-      Banner
+      Banner,
+      BuildForm
     }
   }
 </script>

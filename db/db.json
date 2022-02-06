@@ -1,10 +1,10 @@
 {
   "ingredients": {
-    "size": [
+    "sizes": [
       {
         "id": 1,
         "name": "Extra large",
-        "description": "Twelve slices - 40cm" 
+        "description": "Twelve slices - 40cm"
       },
       {
         "id": 2,
@@ -22,7 +22,7 @@
         "description": "Four slices - 25cm"
       }
     ],
-    "sauce": [
+    "sauces": [
       {
         "id": 1,
         "name": "Tomato sauce"
@@ -37,10 +37,10 @@
       },
       {
         "id": 4,
-        "tipo": "Veggie sauce"
+        "name": "Veggie sauce"
       }
     ],
-    "cheese": [
+    "cheeses": [
       {
         "id": 1,
         "name": "Cheese"
@@ -58,7 +58,7 @@
         "name": "Cheddar cheese"
       }
     ],
-    "meat": [
+    "meats": [
       {
         "id": 1,
         "name": "Ham"
@@ -117,5 +117,83 @@
       "tipo": "Done"
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "name": "Alberto",
+      "size": "Small",
+      "sauce": "Tomato sauce",
+      "cheese": "Cheese",
+      "meat": "Ham",
+      "additives": [
+        "Oregano",
+        "Onios"
+      ],
+      "status": "Ordered",
+      "id": 1
+    },
+    {
+      "name": "teste 1",
+      "size": "Large",
+      "sauce": "Veggie sauce",
+      "cheese": "Parmesan cheese",
+      "meat": "Ham",
+      "additives": [
+        "Oregano"
+      ],
+      "status": "Ordered",
+      "id": 2
+    },
+    {
+      "name": "teste",
+      "size": "Small",
+      "sauce": "Steak sauce",
+      "cheese": "Cheese",
+      "meat": "Ham",
+      "additives": [
+        "Oregano",
+        "Onios"
+      ],
+      "status": "Ordered",
+      "id": 3
+    },
+    {
+      "name": "teste",
+      "size": "Normal",
+      "sauce": "Tomato sauce",
+      "cheese": "Cheese",
+      "meat": "Ham",
+      "additives": [
+        "Oregano",
+        "Onios"
+      ],
+      "status": "Ordered",
+      "id": 4
+    },
+    {
+      "name": "abc",
+      "size": "Normal",
+      "sauce": "Tomato sauce",
+      "cheese": "Cheese",
+      "meat": "Bacon",
+      "additives": [
+        "Onios",
+        "Oregano",
+        "Mushrooms"
+      ],
+      "status": "Ordered",
+      "id": 5
+    },
+    {
+      "name": "teste",
+      "size": "Large",
+      "sauce": "Tomato sauce",
+      "cheese": "Cheese",
+      "meat": "Ham",
+      "additives": [
+        "Oregano"
+      ],
+      "status": "Ordered",
+      "id": 6
+    }
+  ]
 }
