@@ -14,18 +14,24 @@
         <div> Actions </div>
       </div>
       <div id="pizza-table-rows">
-        <div class="pizza-table-row">
-          <div class="order-number">1</div>
-          <div>Nome</div>
-          <div>Size</div>
-          <div>Sauce</div>
-          <div>Cheese</div>
-          <div>Meat</div>
+        <div 
+          v-for="pizza in pizzas"
+          :key="pizza.id"
+          class="pizza-table-row"          
+        >
+          <div class="order-number"> {{ pizza.id }}</div>
+          <div>{{ pizza.name }}</div>
+          <div> {{ pizza.size }} </div>
+          <div> {{ pizza.sauce }} </div>
+          <div> {{ pizza.cheese }} </div>
+          <div> {{ pizza.meat }} </div>
           <div>
             <ul>
-              <li>
-                Add1
-                Add2
+              <li
+                v-for="(additive, index) in pizza.additives"
+                :key="index"
+              >
+                {{ additive }}
               </li>
             </ul>
           </div>
@@ -44,6 +50,27 @@
 <script>
 export default {
   name: 'Dashboard',
+  data() {
+    return {
+      pizzas: null,
+      pizza_id: null,
+      status: []
+    }
+  },
+
+  mounted() {
+    this.getOrders();
+  },
+
+  methods: {
+    async getOrders() {
+      const request = await fetch("http://localhost:3000/orders");
+
+      const data = await request.json();
+
+      this.pizzas = data;
+    }
+  }
 }
 </script>
 
