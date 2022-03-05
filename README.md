@@ -13,5 +13,9 @@ npm run serve
 npm run backend
 ```
 
+### Database
+All data that composes his project are stored in a JSON file named db.json on Felpizza/db/ folder. All requests are pointed to this file in order to view, create, update or delete data
+
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
