@@ -1,5 +1,9 @@
 <template>
   <div id="pizza-table">
+    <Message
+      v-show="this.message"
+      :message="message"
+    />
     <div>
       <div id="pizza-table-header">
         <div class="order-id">
@@ -36,10 +40,22 @@
             </ul>
           </div>
           <div>
-            <select name="status" id="status">
+            <select 
+              name="status" 
+              id="status"
+              @change="updatePizza($event, pizza.id)"
+            >
               <option value="">Select</option>
+              <option 
+                v-for="s in status"
+                :key="s.id"
+                :value="s.name" 
+                :selected="pizza.status == s.name" 
+              >
+                {{ s.name }}  
+              </option>
             </select>
-            <button class="delete-btn">Cancel</button>
+            <button class="delete-btn" @click="deletePizza(pizza.id)">Cancel</button>
           </div>
         </div>
       </div>
@@ -48,13 +64,22 @@
 </template>
 
 <script>
+import Message from './Message.vue';
+
 export default {
   name: 'Dashboard',
+
+  components: {
+    Message,
+  },
+
+
   data() {
     return {
       pizzas: null,
       pizza_id: null,
-      status: []
+      status: [],
+      message: null,
     }
   },
 
@@ -69,6 +94,50 @@ export default {
       const data = await request.json();
 
       this.pizzas = data;
+
+      this.getStatus();
+    },
+
+    async getStatus(){
+      const request = await fetch("http://localhost:3000/status");
+
+      const data = await request.json();
+
+      this.status = data;      
+    },
+
+    async deletePizza(id) {
+      const request = await fetch(`http://localhost:3000/orders/${id}`, {
+        method: "DELETE"
+      });
+
+      const data = await request.json();
+
+      this.message = 'Successfully deleted';
+
+      setTimeout(() => this.message = "", 3000);
+
+      this.getOrders();
+    },
+
+    async updatePizza(event, id){
+      const status = event.target.value;
+
+      const dataJson = JSON.stringify({ status: status });
+
+      const request = await fetch(`http://localhost:3000/orders/${id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: dataJson
+      });
+
+      const response = await request.json();
+
+      console.log(response);
+
+      this.message = `Successfully updated the order ${ response.id }`;
+
+      setTimeout(() => this.message = "", 3000);
     }
   }
 }

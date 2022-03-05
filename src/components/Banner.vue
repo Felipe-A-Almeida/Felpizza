@@ -1,11 +1,13 @@
 <template>
   <div id="main-banner">
-    <h1>
-      Welcome to Felpizza's pizzaria
-    </h1>
-    <h2>
-      Build your own pizza selecting the ingredients based on your tastes
-    </h2>
+    <div class="banner-text">
+      <h1>
+        Welcome to Felpizza's pizzaria
+      </h1>
+      <h2>
+        Build your own pizza selecting the ingredients based on your tastes
+      </h2>
+    </div>
   </div>
 </template>
 
@@ -18,12 +20,16 @@ export default {
 <style scoped>
   #main-banner {
     height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
     background-image: url('/images/banner_home.png');
     background-position: 0 -250px;
     background-size: cover;
+  }
+
+  .banner-text {
+    height: 500px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
   }
 
   #main-banner h1 {

@@ -194,7 +194,7 @@ export default {
 
 <style scoped>
   #pizza-builder-form {
-    max-width: 400px;
+    max-width: 300px;
     margin: 0 auto;
   }
 

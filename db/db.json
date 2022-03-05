@@ -106,56 +106,18 @@
   "status": [
     {
       "id": 1,
-      "tipo": "Ordered"
+      "name": "Ordered"
     },
     {
       "id": 2,
-      "tipo": "In progress"
+      "name": "In progress"
     },
     {
       "id": 3,
-      "tipo": "Done"
+      "name": "Done"
     }
   ],
   "orders": [
-    {
-      "name": "Alberto",
-      "size": "Small",
-      "sauce": "Tomato sauce",
-      "cheese": "Cheese",
-      "meat": "Ham",
-      "additives": [
-        "Oregano",
-        "Onios"
-      ],
-      "status": "Ordered",
-      "id": 1
-    },
-    {
-      "name": "teste 1",
-      "size": "Large",
-      "sauce": "Veggie sauce",
-      "cheese": "Parmesan cheese",
-      "meat": "Ham",
-      "additives": [
-        "Oregano"
-      ],
-      "status": "Ordered",
-      "id": 2
-    },
-    {
-      "name": "teste",
-      "size": "Small",
-      "sauce": "Steak sauce",
-      "cheese": "Cheese",
-      "meat": "Ham",
-      "additives": [
-        "Oregano",
-        "Onios"
-      ],
-      "status": "Ordered",
-      "id": 3
-    },
     {
       "name": "teste",
       "size": "Normal",
@@ -170,20 +132,6 @@
       "id": 4
     },
     {
-      "name": "abc",
-      "size": "Normal",
-      "sauce": "Tomato sauce",
-      "cheese": "Cheese",
-      "meat": "Bacon",
-      "additives": [
-        "Onios",
-        "Oregano",
-        "Mushrooms"
-      ],
-      "status": "Ordered",
-      "id": 5
-    },
-    {
       "name": "teste",
       "size": "Large",
       "sauce": "Tomato sauce",
@@ -194,6 +142,47 @@
       ],
       "status": "Ordered",
       "id": 6
+    },
+    {
+      "name": "GABRIELA C LISBOA ALMEIDA",
+      "size": "Extra large",
+      "sauce": "Tomato sauce",
+      "cheese": "Parmesan cheese",
+      "meat": "Bacon",
+      "additives": [
+        "Oregano",
+        "Onios",
+        "Peppers",
+        "Corn"
+      ],
+      "status": "Ordered",
+      "id": 7
+    },
+    {
+      "name": "abc",
+      "size": "Small",
+      "sauce": "Ranch sauce",
+      "cheese": "Mozzarella cheese",
+      "meat": "Ham",
+      "additives": [
+        "Onios",
+        "Oregano"
+      ],
+      "status": "Ordered",
+      "id": 8
+    },
+    {
+      "name": "FELIPE A ALMEIDA",
+      "size": "Extra large",
+      "sauce": "Tomato sauce",
+      "cheese": "Cheese",
+      "meat": "Pepperonni",
+      "additives": [
+        "Oregano",
+        "Onios"
+      ],
+      "status": "Ordered",
+      "id": 9
     }
   ]
 }
